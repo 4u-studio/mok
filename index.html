@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>hair salon mok｜群馬県沼田市の美容室</title>
+<meta name="description" content="群馬県沼田市のヘアサロン hair salon mok。一人のスタイリストがマンツーマンで対応する小さな美容室。カット・カラー・パーマ・トリートメント。予約優先・当日可。Tel:0278-25-8610">
+<meta name="theme-color" content="#3d2e1e">
+<meta property="og:title" content="hair salon mok｜群馬県沼田市の美容室">
+<meta property="og:description" content="一人のスタイリストが、お一人おひとりと向き合う小さなサロン。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --cream:#f7f3ec;
+  --cream2:#efe9dd;
+  --cream3:#e7dfce;
+  --paper:#fdfbf6;
+  --bark:#33271a;
+  --bark2:#4d3b29;
+  --wood:#8a6342;
+  --wood-light:#b59072;
+  --moss:#737f5f;
+  --ink:#2a2018;
+  --ink-soft:#5b4d3f;
+  --ink-muted:#9d8d7b;
+  --gold:#a98a5c;
+  --line:rgba(138,99,66,0.16);
+  --line2:rgba(138,99,66,0.32);
+  --shadow:0 18px 50px -24px rgba(51,39,26,0.35);
+}
+
+html{scroll-behavior:smooth}
+body{
+  font-family:'Zen Kaku Gothic New',sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  font-size:15px;
+  line-height:1.95;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:var(--wood);color:var(--paper)}
+img{display:block;max-width:100%}
+a{color:inherit}
+
+/* grain overlay */
+body::after{
+  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;
+  opacity:.035;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* ---------- shared ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 40px}
+.eyebrow{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:15px;letter-spacing:.18em;color:var(--wood);
+}
+.section-en{
+  font-family:'Cormorant Garamond',serif;font-weight:300;
+  font-size:clamp(54px,8vw,86px);line-height:.9;
+  color:rgba(138,99,66,0.13);letter-spacing:.02em;
+}
+.section-title{
+  font-family:'Shippori Mincho',serif;font-weight:500;
+  font-size:clamp(21px,2.6vw,27px);color:var(--bark);
+  letter-spacing:.09em;margin-top:-.4em;
+}
+.section-head{position:relative;margin-bottom:64px}
+.section-head .rule{width:46px;height:1px;background:var(--wood-light);margin-top:22px}
+
+/* ---------- top bar ---------- */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:200;height:74px;
+  display:flex;align-items:center;
+  background:rgba(247,243,236,0.82);backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent;
+  transition:background .4s,border-color .4s,height .4s;
+}
+.topbar.scrolled{height:62px;background:rgba(247,243,236,0.97);border-color:var(--line)}
+.topbar .shell{display:flex;align-items:center;justify-content:space-between;width:100%}
+.brand{display:flex;align-items:baseline;gap:12px;text-decoration:none}
+.brand-mark{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+  font-size:27px;color:var(--bark);letter-spacing:.06em;line-height:1;
+}
+.brand-sub{font-size:9.5px;letter-spacing:.34em;color:var(--ink-muted);text-transform:uppercase}
+.navlinks{display:flex;align-items:center;gap:34px}
+.navlinks a{
+  text-decoration:none;font-size:12px;letter-spacing:.14em;color:var(--ink-soft);
+  position:relative;padding:6px 0;transition:color .3s;
+}
+.navlinks a .en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:.04em}
+.navlinks a::after{
+  content:"";position:absolute;left:0;bottom:0;width:0;height:1px;
+  background:var(--wood);transition:width .35s ease;
+}
+.navlinks a:hover{color:var(--bark)}
+.navlinks a:hover::after{width:100%}
+.nav-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--bark);color:var(--cream);text-decoration:none;
+  padding:11px 24px;font-size:11.5px;letter-spacing:.16em;border-radius:1px;
+  transition:background .3s,transform .25s;
+}
+.nav-cta:hover{background:var(--wood);transform:translateY(-2px)}
+.burger{display:none;width:34px;height:34px;flex-direction:column;justify-content:center;gap:6px;cursor:pointer;background:none;border:none}
+.burger span{display:block;height:1.4px;width:24px;background:var(--bark);transition:transform .35s,opacity .3s}
+.burger.open span:nth-child(1){transform:translateY(7.4px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7.4px) rotate(-45deg)}
+
+/* mobile drawer */
+.drawer{
+  position:fixed;inset:0;z-index:190;background:var(--cream);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  opacity:0;visibility:hidden;transition:opacity .4s;
+}
+.drawer.open{opacity:1;visibility:visible}
+.drawer a{
+  text-decoration:none;color:var(--bark);font-family:'Shippori Mincho',serif;
+  font-size:22px;letter-spacing:.14em;padding:14px;
+}
+.drawer a .en{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--wood);letter-spacing:.1em;margin-bottom:2px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding-top:74px;background:var(--cream)}
+.hero-grid{
+  display:grid;grid-template-columns:1.05fr .95fr;
+  min-height:calc(100vh - 74px);
+}
+.hero-text{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:60px 64px 60px 0;position:relative;
+}
+.hero-vert{
+  position:absolute;left:-2px;top:50%;transform:translateY(-50%) rotate(180deg);
+  writing-mode:vertical-rl;font-size:10px;letter-spacing:.42em;
+  color:var(--ink-muted);text-transform:uppercase;
+}
+.hero-eyebrow{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:17px;letter-spacing:.16em;color:var(--wood);
+  margin-bottom:22px;display:flex;align-items:center;gap:14px;
+}
+.hero-eyebrow::before{content:"";width:34px;height:1px;background:var(--wood-light)}
+.hero-title{
+  font-family:'Cormorant Garamond',serif;font-weight:300;
+  font-size:clamp(48px,7vw,82px);line-height:1.04;color:var(--bark);
+  letter-spacing:.01em;margin-bottom:18px;
+}
+.hero-title em{font-style:italic;font-weight:400}
+.hero-jp{
+  font-family:'Shippori Mincho',serif;font-weight:500;
+  font-size:clamp(15px,1.8vw,18px);letter-spacing:.22em;color:var(--wood);
+  margin-bottom:30px;
+}
+.hero-desc{
+  font-size:14px;color:var(--ink-soft);line-height:2.3;font-weight:400;
+  max-width:430px;margin-bottom:40px;
+}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;text-decoration:none;
+  font-size:12.5px;letter-spacing:.12em;border-radius:1px;
+  padding:16px 32px;transition:transform .25s,background .3s,color .3s,border-color .3s;
+}
+.btn-solid{background:var(--bark);color:var(--cream)}
+.btn-solid:hover{background:var(--wood);transform:translateY(-3px)}
+.btn-ghost{background:transparent;color:var(--bark);border:1px solid var(--line2)}
+.btn-ghost:hover{background:var(--bark);color:var(--cream);border-color:var(--bark);transform:translateY(-3px)}
+.btn .arrow{transition:transform .3s}
+.btn:hover .arrow{transform:translateX(4px)}
+.hero-meta{
+  margin-top:46px;padding-top:30px;border-top:1px solid var(--line);
+  display:flex;gap:34px;flex-wrap:wrap;
+}
+.hero-meta-item{display:flex;align-items:flex-start;gap:9px;font-size:11.5px;color:var(--ink-muted);letter-spacing:.04em;line-height:1.7}
+.hero-meta-item svg{flex-shrink:0;margin-top:3px;width:13px;height:13px;stroke:var(--wood-light)}
+
+/* hero visual panel */
+.hero-visual{
+  position:relative;overflow:hidden;
+  background:linear-gradient(150deg,#4a3826 0%,#33271a 55%,#241a10 100%);
+}
+.hero-visual .grain{position:absolute;inset:0;opacity:.5}
+.hero-visual .bigword{
+  position:absolute;right:-5%;bottom:-4%;
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;
+  font-size:clamp(160px,26vw,300px);color:rgba(247,243,236,0.05);line-height:.8;
+}
+.hero-botanical{
+  position:absolute;top:0;left:0;right:0;bottom:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.hero-botanical svg{width:62%;max-width:340px;overflow:visible}
+.draw{
+  stroke-dasharray:1400;stroke-dashoffset:1400;
+  animation:draw 3.4s ease 0.5s forwards;
+}
+@keyframes draw{to{stroke-dashoffset:0}}
+.leaf-fill{opacity:0;animation:leafin 1s ease forwards}
+.lf1{animation-delay:2.2s}.lf2{animation-delay:2.5s}.lf3{animation-delay:2.8s}
+.lf4{animation-delay:3.1s}.lf5{animation-delay:3.4s}.lf6{animation-delay:3.7s}
+@keyframes leafin{from{opacity:0;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
+.hero-visual-cap{
+  position:absolute;left:0;bottom:0;padding:30px 36px;
+  writing-mode:vertical-rl;font-family:'Shippori Mincho',serif;
+  font-size:13px;letter-spacing:.34em;color:rgba(247,243,236,0.6);
+}
+.hero-est{
+  position:absolute;top:34px;right:36px;text-align:right;
+}
+.hero-est .l{font-size:9px;letter-spacing:.32em;color:rgba(247,243,236,0.45);text-transform:uppercase}
+.hero-est .n{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:rgba(247,243,236,0.78)}
+.scroll-cue{
+  position:absolute;left:50%;bottom:26px;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11px;
+  letter-spacing:.2em;color:rgba(247,243,236,0.55);
+}
+.scroll-cue .bar{width:1px;height:42px;background:linear-gradient(rgba(247,243,236,0.5),transparent);position:relative;overflow:hidden}
+.scroll-cue .bar::after{content:"";position:absolute;top:0;left:0;width:100%;height:14px;background:var(--cream);animation:slide 2.2s ease-in-out infinite}
+@keyframes slide{0%{top:-14px}60%,100%{top:42px}}
+
+/* ---------- concept ---------- */
+.concept{padding:130px 0;background:var(--paper)}
+.concept-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:80px;align-items:center}
+.figure{position:relative}
+.figure-frame{
+  position:relative;aspect-ratio:4/5;
+  background:linear-gradient(150deg,var(--cream3),var(--cream2));
+  border:1px solid var(--line);overflow:hidden;
+}
+.figure-frame svg{position:absolute;inset:0;margin:auto;width:64%;opacity:.55}
+.figure-tag{
+  position:absolute;bottom:20px;left:20px;
+  background:var(--paper);padding:9px 16px;
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;
+  letter-spacing:.08em;color:var(--wood);border:1px solid var(--line);
+}
+.figure-accent{
+  position:absolute;top:-22px;right:-22px;width:88px;height:88px;
+  border:1px solid var(--line2);z-index:-1;
+}
+.figure-num{
+  position:absolute;top:-30px;left:-14px;
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:80px;color:rgba(138,99,66,0.12);line-height:1;
+}
+.concept-copy .lead{
+  font-family:'Shippori Mincho',serif;font-weight:500;
+  font-size:clamp(20px,2.4vw,26px);line-height:2;color:var(--bark);
+  letter-spacing:.04em;margin-bottom:28px;
+}
+.concept-copy p{font-size:14px;color:var(--ink-soft);line-height:2.35;margin-bottom:18px}
+.concept-sign{
+  margin-top:30px;font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:20px;color:var(--wood);
+}
+
+/* ---------- quote band ---------- */
+.quote{
+  position:relative;padding:120px 0;text-align:center;
+  background:linear-gradient(160deg,#3b2c1d,#2a2014);overflow:hidden;
+}
+.quote .grain{position:absolute;inset:0;opacity:.45}
+.quote-leaf{position:absolute;opacity:.16;stroke:var(--wood-light)}
+.quote-leaf.l{left:6%;top:50%;transform:translateY(-50%) rotate(-12deg);width:120px}
+.quote-leaf.r{right:6%;top:50%;transform:translateY(-50%) rotate(168deg);width:120px}
+.quote-mark{font-family:'Cormorant Garamond',serif;font-size:70px;color:rgba(181,144,114,.4);line-height:0;margin-bottom:14px}
+.quote-text{
+  font-family:'Shippori Mincho',serif;font-weight:400;
+  font-size:clamp(22px,3.4vw,38px);line-height:1.95;
+  color:var(--cream);letter-spacing:.08em;position:relative;
+}
+.quote-text em{color:var(--wood-light);font-style:normal}
+.quote-by{
+  margin-top:30px;font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:14px;letter-spacing:.2em;color:rgba(247,243,236,0.55);
+}
+
+/* ---------- menu ---------- */
+.menu{padding:130px 0;background:var(--cream)}
+.menu-list{display:grid;grid-template-columns:1fr 1fr;gap:0 70px}
+.menu-row{
+  display:grid;grid-template-columns:auto 1fr auto;
+  align-items:baseline;gap:18px;
+  padding:26px 4px;border-bottom:1px solid var(--line);
+}
+.menu-row:hover .menu-name{color:var(--wood)}
+.menu-no{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:18px;color:var(--wood-light);
+}
+.menu-info .menu-name{
+  font-family:'Shippori Mincho',serif;font-weight:500;font-size:17px;
+  color:var(--bark);letter-spacing:.06em;transition:color .3s;
+}
+.menu-info .menu-desc{font-size:11.5px;color:var(--ink-muted);line-height:1.7;margin-top:4px;letter-spacing:.02em}
+.menu-price{
+  font-family:'Cormorant Garamond',serif;font-weight:500;
+  font-size:23px;color:var(--bark);white-space:nowrap;
+}
+.menu-price .yen{font-size:14px;margin-right:1px}
+.menu-price .from{font-family:'Zen Kaku Gothic New',sans-serif;font-size:10px;color:var(--ink-muted);margin-left:3px}
+.menu-foot{
+  margin-top:34px;display:flex;align-items:center;gap:12px;
+  font-size:11.5px;color:var(--ink-muted);
+}
+.menu-foot .ln{flex:1;height:1px;background:var(--line)}
+
+/* ---------- features ---------- */
+.features{padding:130px 0;background:var(--paper)}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.feature-card{
+  padding:42px 30px;border-right:1px solid var(--line);
+  transition:background .4s;position:relative;
+}
+.feature-card:last-child{border-right:none}
+.feature-card:hover{background:var(--cream)}
+.feature-card:hover .feature-icon{transform:translateY(-4px)}
+.feature-no{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:15px;color:var(--wood-light);letter-spacing:.1em;margin-bottom:24px;
+}
+.feature-icon{
+  width:46px;height:46px;margin-bottom:22px;transition:transform .4s;
+}
+.feature-icon svg{width:100%;height:100%;stroke:var(--wood);fill:none;stroke-width:1.3}
+.feature-title{
+  font-family:'Shippori Mincho',serif;font-weight:600;font-size:15px;
+  color:var(--bark);letter-spacing:.05em;margin-bottom:12px;line-height:1.6;
+}
+.feature-body{font-size:12.5px;color:var(--ink-muted);line-height:2}
+
+/* ---------- access ---------- */
+.access{padding:130px 0;background:var(--cream)}
+.access-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:stretch}
+.access-map{
+  position:relative;min-height:400px;border:1px solid var(--line);
+  overflow:hidden;background:var(--cream3);
+}
+.access-map iframe{width:100%;height:100%;border:0;filter:saturate(.82) contrast(1.04)}
+.access-info{display:flex;flex-direction:column;justify-content:center}
+.info-row{
+  display:grid;grid-template-columns:96px 1fr;gap:20px;
+  padding:20px 0;border-bottom:1px solid var(--line);align-items:start;
+}
+.info-row:first-child{padding-top:0}
+.info-label{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:14px;color:var(--wood);letter-spacing:.06em;
+}
+.info-label .jp{display:block;font-family:'Zen Kaku Gothic New',sans-serif;font-style:normal;font-size:10px;letter-spacing:.16em;color:var(--ink-muted);margin-top:2px}
+.info-val{font-size:13.5px;color:var(--ink-soft);line-height:1.95;letter-spacing:.03em}
+.info-val .big{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--bark);letter-spacing:.04em}
+.access-route{
+  margin-top:28px;display:inline-flex;align-items:center;gap:9px;
+  text-decoration:none;font-size:12px;letter-spacing:.1em;color:var(--wood);
+  align-self:flex-start;border-bottom:1px solid var(--line2);padding-bottom:5px;
+  transition:color .3s,border-color .3s;
+}
+.access-route:hover{color:var(--bark);border-color:var(--bark)}
+
+/* ---------- contact ---------- */
+.contact{
+  position:relative;padding:130px 0;overflow:hidden;
+  background:linear-gradient(165deg,#3a2c1d,#251b11);
+}
+.contact .grain{position:absolute;inset:0;opacity:.4}
+.contact .shell{position:relative}
+.contact .section-en{color:rgba(247,243,236,0.07)}
+.contact .section-title{color:var(--cream)}
+.contact .rule{background:var(--wood-light)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.contact-call .label{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:14px;letter-spacing:.16em;color:var(--wood-light);margin-bottom:10px;
+}
+.contact-tel{
+  font-family:'Cormorant Garamond',serif;font-weight:300;
+  font-size:clamp(38px,5vw,52px);color:var(--cream);letter-spacing:.03em;
+  line-height:1.1;text-decoration:none;display:inline-block;
+}
+.contact-tel:hover{color:var(--wood-light)}
+.contact-hours{font-size:12px;letter-spacing:.1em;color:rgba(247,243,236,0.55);margin-top:8px}
+.contact-points{margin:30px 0 32px;display:flex;flex-direction:column;gap:12px}
+.contact-point{display:flex;gap:11px;font-size:13px;color:rgba(247,243,236,0.78);line-height:1.7}
+.contact-point svg{flex-shrink:0;width:15px;height:15px;stroke:var(--wood-light);margin-top:3px}
+.btn-call-lg{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--cream);color:var(--bark);text-decoration:none;
+  padding:18px;font-size:13px;letter-spacing:.14em;border-radius:1px;
+  transition:background .3s,transform .25s;
+}
+.btn-call-lg:hover{background:var(--wood-light);transform:translateY(-3px)}
+.form-field{margin-bottom:18px}
+.form-field label{
+  display:block;font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:13px;letter-spacing:.08em;color:var(--wood-light);margin-bottom:8px;
+}
+.form-field label .jp{font-family:'Zen Kaku Gothic New',sans-serif;font-style:normal;font-size:10px;color:rgba(247,243,236,0.5);letter-spacing:.14em;margin-left:8px}
+.form-field input,.form-field textarea{
+  width:100%;background:rgba(247,243,236,0.06);
+  border:1px solid rgba(247,243,236,0.15);color:var(--cream);
+  padding:14px 16px;font-size:13px;font-family:'Zen Kaku Gothic New',sans-serif;
+  border-radius:1px;outline:none;transition:border-color .3s,background .3s;
+}
+.form-field input::placeholder,.form-field textarea::placeholder{color:rgba(247,243,236,0.32)}
+.form-field input:focus,.form-field textarea:focus{border-color:var(--wood-light);background:rgba(247,243,236,0.1)}
+.form-field textarea{height:104px;resize:none;line-height:1.8}
+.form-submit{
+  width:100%;background:var(--wood);color:var(--cream);border:none;
+  padding:17px;font-size:13px;letter-spacing:.2em;cursor:pointer;
+  font-family:'Zen Kaku Gothic New',sans-serif;border-radius:1px;
+  transition:background .3s,transform .25s;
+}
+.form-submit:hover{background:var(--wood-light);transform:translateY(-2px)}
+.form-note{font-size:10.5px;color:rgba(247,243,236,0.4);margin-top:10px;line-height:1.7}
+
+/* ---------- footer ---------- */
+footer{background:var(--bark);padding:70px 0 30px}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:50px;padding-bottom:46px;border-bottom:1px solid rgba(247,243,236,0.1)}
+.footer-brand .fb-mark{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+  font-size:32px;color:var(--cream);letter-spacing:.06em;
+}
+.footer-brand .fb-sub{font-size:9px;letter-spacing:.32em;color:rgba(247,243,236,0.4);text-transform:uppercase;margin:6px 0 18px}
+.footer-brand p{font-size:12px;color:rgba(247,243,236,0.5);line-height:2;max-width:280px}
+.footer-col h4{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;
+  font-size:14px;color:var(--wood-light);letter-spacing:.1em;margin-bottom:16px;
+}
+.footer-col a,.footer-col p{
+  display:block;text-decoration:none;font-size:12px;
+  color:rgba(247,243,236,0.6);line-height:2.3;letter-spacing:.04em;
+  transition:color .3s;
+}
+.footer-col a:hover{color:var(--cream)}
+.footer-bottom{
+  padding-top:24px;display:flex;justify-content:space-between;
+  align-items:center;flex-wrap:wrap;gap:10px;
+}
+.footer-bottom span{font-size:10.5px;color:rgba(247,243,236,0.38);letter-spacing:.08em}
+
+/* ---------- responsive ---------- */
+@media(max-width:1000px){
+  .shell{padding:0 28px}
+  .hero-grid{grid-template-columns:1fr;min-height:auto}
+  .hero-text{padding:70px 0 64px;order:2}
+  .hero-vert{display:none}
+  .hero-visual{order:1;min-height:46vh}
+  .scroll-cue{display:none}
+  .concept-grid{grid-template-columns:1fr;gap:54px}
+  .figure{max-width:380px;margin:0 auto}
+  .figure-num{left:0}
+  .menu-list{grid-template-columns:1fr;gap:0}
+  .feature-grid{grid-template-columns:1fr 1fr}
+  .feature-card:nth-child(2){border-right:none}
+  .feature-card:nth-child(1),.feature-card:nth-child(2){border-bottom:1px solid var(--line)}
+  .access-grid{grid-template-columns:1fr;gap:36px}
+  .access-map{min-height:320px}
+  .contact-grid{grid-template-columns:1fr;gap:48px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
+  .footer-brand{grid-column:1/-1}
+}
+@media(max-width:600px){
+  .shell{padding:0 20px}
+  .navlinks{display:none}
+  .burger{display:flex}
+  .topbar .nav-cta{display:none}
+  body{font-size:14px}
+  .section-head{margin-bottom:46px}
+  .concept,.menu,.features,.access,.contact{padding:84px 0}
+  .quote{padding:84px 0}
+  .quote-leaf{display:none}
+  .feature-grid{grid-template-columns:1fr}
+  .feature-card{border-right:none;border-bottom:1px solid var(--line)}
+  .feature-card:last-child{border-bottom:none}
+  .hero-meta{gap:18px}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== TOP BAR ===================== -->
+<header class="topbar" id="topbar">
+  <div class="shell">
+    <a href="#top" class="brand">
+      <span class="brand-mark">mok</span>
+      <span class="brand-sub">Hair Salon</span>
+    </a>
+    <nav class="navlinks">
+      <a href="#concept"><span class="en">Concept</span></a>
+      <a href="#menu"><span class="en">Menu</span></a>
+      <a href="#features"><span class="en">Reason</span></a>
+      <a href="#access"><span class="en">Access</span></a>
+      <a href="#contact"><span class="en">Contact</span></a>
+    </nav>
+    <a href="tel:0278258610" class="nav-cta">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      ご予約
+    </a>
+    <button class="burger" id="burger" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- mobile drawer -->
+<div class="drawer" id="drawer">
+  <a href="#concept"><span class="en">Concept</span>当店について</a>
+  <a href="#menu"><span class="en">Menu</span>メニュー・料金</a>
+  <a href="#features"><span class="en">Reason</span>選ばれる理由</a>
+  <a href="#access"><span class="en">Access</span>アクセス</a>
+  <a href="#contact"><span class="en">Contact</span>ご予約・お問い合わせ</a>
+</div>
+
+<span id="top"></span>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-text shell" style="max-width:none">
+      <div class="hero-vert">Numata, Gunma — Since</div>
+      <div class="hero-eyebrow reveal in">Hair Salon in Numata</div>
+      <h1 class="hero-title reveal in d1">hair&nbsp;salon<br><em>mok</em></h1>
+      <p class="hero-jp reveal in d2">沼田市の、小さな美容室</p>
+      <p class="hero-desc reveal in d3">
+        一人のスタイリストが、お客様お一人おひとりと丁寧に向き合う小さなサロン。
+        慌ただしい日常から少し離れて、ゆったりとした自分のための時間をお過ごしください。
+      </p>
+      <div class="hero-btns reveal in d4">
+        <a href="tel:0278258610" class="btn btn-solid">お電話でご予約 <span class="arrow">→</span></a>
+        <a href="#menu" class="btn btn-ghost">メニューを見る</a>
+      </div>
+      <div class="hero-meta reveal in d5">
+        <span class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          予約優先制<br>当日のご来店もご相談可
+        </span>
+        <span class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          スタイリスト1名による<br>マンツーマン対応
+        </span>
+        <span class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+          10代〜50代以上まで<br>幅広い世代に
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="grain" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;120&quot; height=&quot;120&quot;><filter id=&quot;n&quot;><feTurbulence baseFrequency=&quot;0.8&quot; numOctaves=&quot;2&quot;/></filter><rect width=&quot;100%25&quot; height=&quot;100%25&quot; filter=&quot;url(%23n)&quot; opacity=&quot;0.4&quot;/></svg>')"></div>
+      <div class="bigword">mok</div>
+      <div class="hero-est">
+        <div class="l">Numata · Gunma</div>
+        <div class="n">no.46-1</div>
+      </div>
+      <!-- 差し替え：店内写真を入れる場合は、この .hero-botanical ブロックを <img> に置き換えてください -->
+      <div class="hero-botanical">
+        <svg viewBox="0 0 200 320" fill="none">
+          <path class="draw" d="M100 320 C100 250 100 200 100 120" stroke="#b59072" stroke-width="1.6" stroke-linecap="round"/>
+          <path class="draw" d="M100 240 C70 225 52 200 48 165" stroke="#b59072" stroke-width="1.2" stroke-linecap="round"/>
+          <path class="draw" d="M100 190 C130 178 150 152 156 118" stroke="#b59072" stroke-width="1.2" stroke-linecap="round"/>
+          <path class="draw" d="M100 145 C78 132 66 110 64 80" stroke="#b59072" stroke-width="1.2" stroke-linecap="round"/>
+          <path class="draw" d="M100 120 C100 90 102 70 108 44" stroke="#b59072" stroke-width="1.2" stroke-linecap="round"/>
+          <ellipse class="leaf-fill lf1" cx="44" cy="158" rx="20" ry="9" transform="rotate(-38 44 158)" fill="#8a6342" fill-opacity=".5" stroke="#b59072" stroke-width="1"/>
+          <ellipse class="leaf-fill lf2" cx="160" cy="112" rx="20" ry="9" transform="rotate(40 160 112)" fill="#8a6342" fill-opacity=".5" stroke="#b59072" stroke-width="1"/>
+          <ellipse class="leaf-fill lf3" cx="60" cy="74" rx="18" ry="8" transform="rotate(-44 60 74)" fill="#8a6342" fill-opacity=".5" stroke="#b59072" stroke-width="1"/>
+          <ellipse class="leaf-fill lf4" cx="112" cy="40" rx="18" ry="8" transform="rotate(22 112 40)" fill="#8a6342" fill-opacity=".5" stroke="#b59072" stroke-width="1"/>
+          <ellipse class="leaf-fill lf5" cx="78" cy="208" rx="16" ry="7" transform="rotate(-30 78 208)" fill="#8a6342" fill-opacity=".4" stroke="#b59072" stroke-width="1"/>
+          <circle class="leaf-fill lf6" cx="100" cy="120" r="3.4" fill="#b59072"/>
+        </svg>
+      </div>
+      <div class="hero-visual-cap">ゆっくりと、自分らしく</div>
+      <div class="scroll-cue"><span>Scroll</span><span class="bar"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONCEPT ===================== -->
+<section class="concept" id="concept">
+  <div class="shell">
+    <div class="concept-grid">
+      <div class="figure reveal">
+        <div class="figure-num">01</div>
+        <div class="figure-accent"></div>
+        <!-- 差し替え：店内写真がある場合は、このブロック全体を <img src="店内写真.jpg" alt="店内の様子"> に置き換えてください -->
+        <div class="figure-frame">
+          <svg viewBox="0 0 200 250" fill="none">
+            <path d="M100 250 C100 190 100 150 100 95" stroke="#8a6342" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M100 180 C72 168 56 145 54 112" stroke="#8a6342" stroke-width="1.1" stroke-linecap="round"/>
+            <path d="M100 140 C128 128 144 105 146 74" stroke="#8a6342" stroke-width="1.1" stroke-linecap="round"/>
+            <path d="M100 105 C100 80 102 62 106 42" stroke="#8a6342" stroke-width="1.1" stroke-linecap="round"/>
+            <ellipse cx="50" cy="106" rx="18" ry="8" transform="rotate(-38 50 106)" fill="#8a6342" fill-opacity=".22" stroke="#8a6342" stroke-width=".9"/>
+            <ellipse cx="150" cy="68" rx="18" ry="8" transform="rotate(40 150 68)" fill="#8a6342" fill-opacity=".22" stroke="#8a6342" stroke-width=".9"/>
+            <ellipse cx="106" cy="38" rx="16" ry="7" transform="rotate(20 106 38)" fill="#8a6342" fill-opacity=".22" stroke="#8a6342" stroke-width=".9"/>
+          </svg>
+          <span class="figure-tag">Salon Interior</span>
+        </div>
+      </div>
+      <div class="concept-copy reveal d2">
+        <div class="section-head" style="margin-bottom:30px">
+          <div class="eyebrow">Concept</div>
+          <h2 class="section-title">ゆっくりと、自分らしく。</h2>
+          <div class="rule"></div>
+        </div>
+        <p class="lead">ここに来たときだけは、<br>自分のための時間を。</p>
+        <p>hair salon mok は、沼田市西原新町にある、一人のスタイリストが営む小さな美容室です。大勢のお客様で賑わうサロンとは違い、まわりを気にせず、気兼ねなくお話しいただける静かな空間をお届けします。</p>
+        <p>お客様のなりたいイメージやお悩みを時間をかけて丁寧に伺い、毎日のスタイリングが少し楽になる——そんなヘアスタイルをご提案します。初めての方も、どうぞ気軽にお越しください。</p>
+        <div class="concept-sign">— hair salon mok</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUOTE ===================== -->
+<section class="quote">
+  <div class="grain" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;120&quot; height=&quot;120&quot;><filter id=&quot;n&quot;><feTurbulence baseFrequency=&quot;0.8&quot; numOctaves=&quot;2&quot;/></filter><rect width=&quot;100%25&quot; height=&quot;100%25&quot; filter=&quot;url(%23n)&quot; opacity=&quot;0.4&quot;/></svg>')"></div>
+  <svg class="quote-leaf l" viewBox="0 0 100 200" fill="none"><path d="M50 200 V40" stroke-width="1.2"/><path d="M50 150 C30 138 22 120 22 96" stroke-width="1"/><path d="M50 110 C70 98 78 80 78 56" stroke-width="1"/><path d="M50 78 C50 58 52 44 56 28" stroke-width="1"/></svg>
+  <svg class="quote-leaf r" viewBox="0 0 100 200" fill="none"><path d="M50 200 V40" stroke-width="1.2"/><path d="M50 150 C30 138 22 120 22 96" stroke-width="1"/><path d="M50 110 C70 98 78 80 78 56" stroke-width="1"/><path d="M50 78 C50 58 52 44 56 28" stroke-width="1"/></svg>
+  <div class="shell reveal">
+    <div class="quote-mark">“</div>
+    <p class="quote-text">髪をととのえる時間が、<br><em>心をととのえる時間</em>になりますように。</p>
+    <div class="quote-by">— Our Wish</div>
+  </div>
+</section>
+
+<!-- ===================== MENU ===================== -->
+<section class="menu" id="menu">
+  <div class="shell">
+    <div class="section-head reveal">
+      <div class="section-en">Menu</div>
+      <h2 class="section-title">メニュー・料金</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="menu-list">
+      <div class="menu-row reveal">
+        <span class="menu-no">01</span>
+        <span class="menu-info"><span class="menu-name">カット</span><span class="menu-desc">骨格・髪質に合わせた丁寧なカット</span></span>
+        <span class="menu-price"><span class="yen">¥</span>4,000<span class="from">〜</span></span>
+      </div>
+      <div class="menu-row reveal d1">
+        <span class="menu-no">02</span>
+        <span class="menu-info"><span class="menu-name">カラー</span><span class="menu-desc">全体・リタッチ・ハイライト対応</span></span>
+        <span class="menu-price"><span class="yen">¥</span>6,000<span class="from">〜</span></span>
+      </div>
+      <div class="menu-row reveal">
+        <span class="menu-no">03</span>
+        <span class="menu-info"><span class="menu-name">パーマ</span><span class="menu-desc">デジタルパーマ・コールドパーマ</span></span>
+        <span class="menu-price"><span class="yen">¥</span>7,000<span class="from">〜</span></span>
+      </div>
+      <div class="menu-row reveal d1">
+        <span class="menu-no">04</span>
+        <span class="menu-info"><span class="menu-name">トリートメント</span><span class="menu-desc">髪のダメージ・パサつきケア</span></span>
+        <span class="menu-price"><span class="yen">¥</span>3,000<span class="from">〜</span></span>
+      </div>
+      <div class="menu-row reveal">
+        <span class="menu-no">05</span>
+        <span class="menu-info"><span class="menu-name">縮毛矯正</span><span class="menu-desc">くせ・うねりをしっかり伸ばす</span></span>
+        <span class="menu-price"><span class="yen">¥</span>12,000<span class="from">〜</span></span>
+      </div>
+      <div class="menu-row reveal d1">
+        <span class="menu-no">06</span>
+        <span class="menu-info"><span class="menu-name">ヘッドスパ</span><span class="menu-desc">頭皮ケア・リラクゼーション</span></span>
+        <span class="menu-price"><span class="yen">¥</span>3,500<span class="from">〜</span></span>
+      </div>
+    </div>
+    <div class="menu-foot reveal">
+      <span class="ln"></span>
+      <span>※表示は目安料金です。詳しくはお電話またはご来店時にお問い合わせください。</span>
+      <span class="ln"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURES ===================== -->
+<section class="features" id="features">
+  <div class="shell">
+    <div class="section-head reveal">
+      <div class="section-en">Reason</div>
+      <h2 class="section-title">mok が選ばれる理由</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <div class="feature-no">01</div>
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3 class="feature-title">マンツーマンの<br>安心感</h3>
+        <p class="feature-body">スタイリスト1名が最後まで担当。他のお客様を気にせず、リラックスしてお過ごしいただけます。</p>
+      </div>
+      <div class="feature-card reveal d1">
+        <div class="feature-no">02</div>
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3 class="feature-title">幅広い年代に<br>対応</h3>
+        <p class="feature-body">10代から50代以上まで、どなたでも気軽にご来店いただけます。初めての方も大歓迎です。</p>
+      </div>
+      <div class="feature-card reveal d2">
+        <div class="feature-no">03</div>
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3 class="feature-title">丁寧な<br>カウンセリング</h3>
+        <p class="feature-body">なりたいイメージを時間をかけて伺い、毎日のスタイリングが楽になるスタイルをご提案します。</p>
+      </div>
+      <div class="feature-card reveal d3">
+        <div class="feature-no">04</div>
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+        <h3 class="feature-title">予約優先・<br>当日も相談可</h3>
+        <p class="feature-body">ご予約優先ですが、空き状況によっては当日のご来店も承ります。まずはお気軽にお電話を。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ACCESS ===================== -->
+<section class="access" id="access">
+  <div class="shell">
+    <div class="section-head reveal">
+      <div class="section-en">Access</div>
+      <h2 class="section-title">アクセス・店舗情報</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="access-grid">
+      <div class="access-map reveal">
+        <iframe
+          src="https://www.google.com/maps?q=%E7%BE%A4%E9%A6%AC%E7%9C%8C%E6%B2%BC%E7%94%B0%E5%B8%82%E8%A5%BF%E5%8E%9F%E6%96%B0%E7%94%BA46-1&z=16&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="hair salon mok 地図"></iframe>
+      </div>
+      <div class="access-info reveal d2">
+        <div class="info-row">
+          <span class="info-label">Address<span class="jp">住所</span></span>
+          <span class="info-val">〒群馬県沼田市<br>西原新町46-1</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Tel<span class="jp">電話</span></span>
+          <span class="info-val"><span class="big">0278-25-8610</span></span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Hours<span class="jp">営業時間</span></span>
+          <span class="info-val">10:00 〜 19:00</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Closed<span class="jp">定休日</span></span>
+          <span class="info-val">月曜日（祝日の場合は翌火曜日）</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Booking<span class="jp">ご予約</span></span>
+          <span class="info-val">予約優先・当日可（要確認）</span>
+        </div>
+        <a class="access-route" href="https://www.google.com/maps?q=%E7%BE%A4%E9%A6%AC%E7%9C%8C%E6%B2%BC%E7%94%B0%E5%B8%82%E8%A5%BF%E5%8E%9F%E6%96%B0%E7%94%BA46-1" target="_blank" rel="noopener">
+          Google マップでルートを見る
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="contact" id="contact">
+  <div class="grain" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;120&quot; height=&quot;120&quot;><filter id=&quot;n&quot;><feTurbulence baseFrequency=&quot;0.8&quot; numOctaves=&quot;2&quot;/></filter><rect width=&quot;100%25&quot; height=&quot;100%25&quot; filter=&quot;url(%23n)&quot; opacity=&quot;0.4&quot;/></svg>')"></div>
+  <div class="shell">
+    <div class="section-head reveal">
+      <div class="section-en">Contact</div>
+      <h2 class="section-title">ご予約・お問い合わせ</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-call reveal">
+        <div class="label">Call us</div>
+        <a href="tel:0278258610" class="contact-tel">0278-25-8610</a>
+        <div class="contact-hours">受付時間 10:00〜19:00 ／ 月曜定休</div>
+        <div class="contact-points">
+          <span class="contact-point"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>ご予約優先で承っております</span>
+          <span class="contact-point"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>初めての方もどうぞお気軽に</span>
+          <span class="contact-point"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>当日のご来店もご相談ください</span>
+        </div>
+        <a href="tel:0278258610" class="btn-call-lg">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          今すぐ電話で予約する
+        </a>
+      </div>
+      <div class="contact-form reveal d2">
+        <div class="form-field">
+          <label>Name<span class="jp">お名前</span></label>
+          <input type="text" placeholder="山田 花子">
+        </div>
+        <div class="form-field">
+          <label>Phone<span class="jp">電話番号</span></label>
+          <input type="tel" placeholder="000-0000-0000">
+        </div>
+        <div class="form-field">
+          <label>Message<span class="jp">ご希望のメニュー・ご要望</span></label>
+          <textarea placeholder="カット希望／初めてです　など"></textarea>
+        </div>
+        <button class="form-submit" type="button" onclick="alert('お問い合わせフォームを送信するには、別途フォーム送信機能の設定が必要です。お急ぎの場合はお電話ください。');">送　信　す　る</button>
+        <p class="form-note">※こちらは表示見本です。実際に送信できるようにするには、フォーム送信サービス（Googleフォーム・formrun 等）との連携設定が必要です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="shell">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="fb-mark">mok</div>
+        <div class="fb-sub">Hair Salon — Numata, Gunma</div>
+        <p>一人のスタイリストが、お客様お一人おひとりと向き合う、沼田市の小さな美容室です。</p>
+      </div>
+      <div class="footer-col">
+        <h4>Menu</h4>
+        <a href="#concept">当店について</a>
+        <a href="#menu">メニュー・料金</a>
+        <a href="#features">選ばれる理由</a>
+        <a href="#access">アクセス</a>
+        <a href="#contact">ご予約・お問い合わせ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <p>群馬県沼田市西原新町46-1</p>
+        <p>Tel. 0278-25-8610</p>
+        <p>営業時間 10:00〜19:00</p>
+        <p>定休日 月曜日</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 hair salon mok. All rights reserved.</span>
+      <span>群馬県沼田市の美容室</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// reveal on scroll
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:0.14,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+
+// topbar state
+const topbar=document.getElementById('topbar');
+const onScroll=()=>topbar.classList.toggle('scrolled',window.scrollY>20);
+onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+// mobile drawer
+const burger=document.getElementById('burger');
+const drawer=document.getElementById('drawer');
+const toggle=(state)=>{
+  const open=state!==undefined?state:!drawer.classList.contains('open');
+  drawer.classList.toggle('open',open);
+  burger.classList.toggle('open',open);
+  document.body.style.overflow=open?'hidden':'';
+};
+burger.addEventListener('click',()=>toggle());
+drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>toggle(false)));
+</script>
+</body>
+</html>
